@@ -1,0 +1,20 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.particles {
+  position: fixed;
+  right: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* Color Palette
+white: EEF2F3
+seafoam: 87A1A6
+darker seafoam: 5C717C
+light blue: 11A3DE
+dark blue: 202732 */
