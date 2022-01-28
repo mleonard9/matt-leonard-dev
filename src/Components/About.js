@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components'
 import photo from '../Resources/profile-picture.jpg';
+import resume from '../Resources/resume.json';
+import Skills from './Skills';
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 48rem;
+  justify-content: center;
+  align-items: center;
   background: #EEF2F3;
 `;
 
@@ -15,7 +17,7 @@ const PhotoCard = styled.div`
   height: 32rem;
   width: 20rem;
   text-align: center;
-  margin-right: 8rem;
+  margin: 2rem;
   background: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
@@ -27,9 +29,12 @@ const Photo = styled.img`
 `;
 
 const InfoCard = styled.div`
-  height: 44rem;
-  width: 96rem;
+  height: 40rem;
+  width: 100%;
+  max-width: 72rem;
   background: white;
+  padding: 1rem 2rem;
+  margin: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
@@ -43,10 +48,10 @@ function About() {
     <Wrapper>
       <PhotoCard>
         <Photo src={photo} />
-        <Name>Matt Leonard</Name>
+        <Name>{resume.name}</Name>
       </PhotoCard>
       <InfoCard>
-
+        <Skills />
       </InfoCard>
     </Wrapper>
     </>

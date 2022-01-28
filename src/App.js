@@ -12,8 +12,8 @@ function App() {
 			<div className="App">
 				<Home />
 				<About />
-				<Experience />
 				<Projects />
+				<Experience />
 				<Particles options={particlesOptions} className='particles'/>
 			</div>
     );
