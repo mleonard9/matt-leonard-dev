@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components'
 import myAvatar from '../Resources/cartoon-avatar.svg';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import resume from '../Resources/resume.json';
+
+import resumePDF from '../Resources/Matthew-Leonard-Resume.pdf';
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -46,7 +49,7 @@ const SubTitle = styled.div`
   color: #EEF2F3;
 `;
 
-const Button = styled.a`
+const DownloadButton = styled.a`
   border-radius: .25rem;
   padding: .5rem;
   margin: auto;
@@ -55,7 +58,6 @@ const Button = styled.a`
   color: #EEF2F3;
   text-decoration: none;
 `
-
 function Home() {
     return (
       <>
@@ -63,10 +65,10 @@ function Home() {
         <Card>
         <Avatar src={myAvatar} />
         <Title>
-          Matt Leonard
+          {resume.name}
         </Title>
         <SubTitle>
-          Fullstack Web Developer
+          {resume.title}
         </SubTitle>
         <IconWrapper>
           <Icon href="https://www.github.com/mleonard9" target="_blank">
@@ -76,9 +78,9 @@ function Home() {
            <BsLinkedin />
           </Icon>
         </IconWrapper>
-        <Button href="/profile.pdf" download> 
+        <DownloadButton href={resumePDF} without rel="noopener noreferrer" target="_blank"> 
           Download CV
-        </Button>
+        </DownloadButton>
         </Card>
       </Wrapper>
       </>
