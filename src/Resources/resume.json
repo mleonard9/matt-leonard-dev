@@ -8,12 +8,8 @@
       "rating": 70
     },
     {
-      "name": "Javascript",
-      "rating": 70
-    },
-    {
       "name": "React",
-      "rating": 60
+      "rating": 70
     },
     {
       "name": "Java",
@@ -23,6 +19,9 @@
       "name": "Swift",
       "rating": 40
     }
+  ],
+  "technologies": [
+    "Javascript", "HTML", "CSS", "Next.js", "Styled Components", "Firebase"
   ],
   "experience": [
     {
@@ -52,6 +51,69 @@
   ]
   ,
   "projects": [
-
+    {
+      "name": "Calculator",
+      "description": "In the process of learning React, it is only done correctly if you create a calculator and handle all of the logic yourself. Here is mine.",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["Javascript", "HTML", "CSS", "Next.js", "Styled Components", "Firebase"],
+      "source":"",
+      "live": ""
+    },
+    {
+      "name": "Budget Calculator",
+      "description": "As a Software Developer consultant at Kin and Carta I have had oppurtunities to learn and develop on multiple technoligies including Java, Swift, Angular, and React. I have used these technologies to help my teams create enterprise level apps in both the Agriculture and Security spaces.",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["react"],
+      "source":"",
+      "live": ""
+    },
+    {
+      "name": "Recipe Organizer",
+      "description": "As a Software Developer consultant at Kin and Carta I have had oppurtunities to learn and develop on multiple technoligies including Java, Swift, Angular, and React. I have used these technologies to help my teams create enterprise level apps in both the Agriculture and Security spaces.",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["react"],
+      "source":"",
+      "live": ""
+    },
+    {
+      "name": "Calculator2",
+      "description": "",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["react"],
+      "source":"",
+      "live": ""
+    },
+    {
+      "name": "Calculator4",
+      "description": "",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["react"],
+      "source":"",
+      "live": ""
+    },
+    {
+      "name": "Budget Calculator2",
+      "description": "",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["react"],
+      "source":"",
+      "live": ""
+    },
+    {
+      "name": "Recipe Organizer2",
+      "description": "",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["react"],
+      "source":"",
+      "live": ""
+    },
+    {
+      "name": "Calculator3",
+      "description": "",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["react"],
+      "source":"",
+      "live": ""
+    }
   ]
 }

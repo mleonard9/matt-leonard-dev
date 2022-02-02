@@ -2,6 +2,8 @@ import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from 'styled-components'
+import resume from '../Resources/resume.json';
+import Button from '@mui/material/Button';
 
 // Import Swiper styles
 import "swiper/css";
@@ -18,22 +20,21 @@ SwiperCore.use([Pagination]);
 const Wrapper = styled.div`
   display: flex
   width: 100%;
-  height: 48rem;
+  height: 42rem;
   padding: 2rem;
-  background: #87A1A6;
+  background: #15202B;
 `;
 
 const SwiperWrapper = styled.div`
   width: 100%;
   height: 100%;
-
+  
   .swiper {
     width: 100%;
     height: 100%;
   }
 
   .swiper-slide {
-    text-align: center;
     font-size: 18px;
 
     /* Center slide text vertically */
@@ -62,9 +63,61 @@ const SwiperWrapper = styled.div`
 const ProjectSlide = styled.div`
   height: 32rem;
   width: 24rem;
-  background: white;
+  display: flex;
+  flex-direction: column;
+  background: #192734;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
 `;
+
+const SlideImage = styled.div`
+  height: 16rem;
+  width: 100%;
+  background-image: url(${props => props.src || ""});
+`;
+
+const SlideTitle = styled.div`
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin: .25rem .5rem;
+`;
+
+const SlideDescription = styled.div`
+  height: 6rem;
+  overflow: hidden;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: .25rem .5rem .5rem .5rem;
+  opacity: 75%;
+`;
+
+
+const SlideActions = styled.div`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+`;
+
+const SlideTechnologies = styled.div`
+  width: 100%;
+`;
+
+const ActionButton = styled(Button)`
+  && {
+   margin: .5rem;
+  }
+`;
+
+const Tag = styled(Button)`
+  && {
+    line-height: .5rem;
+    color: white;
+    background-color: #22303C;
+    margin: .25rem;
+    padding: .5rem;
+  }
+`;
+
 
 function Projects() {
   return (
@@ -91,46 +144,32 @@ function Projects() {
               } 
             }}
               className="mySwiper">
-          <SwiperSlide>
-            <ProjectSlide>
-
-            </ProjectSlide>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectSlide>
-
-            </ProjectSlide>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectSlide>
-
-            </ProjectSlide>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectSlide>
-
-            </ProjectSlide>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectSlide>
-
-            </ProjectSlide>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectSlide>
-
-            </ProjectSlide>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectSlide>
-
-            </ProjectSlide>
-          </SwiperSlide>
-          <SwiperSlide>
-            <ProjectSlide>
-
-            </ProjectSlide>
-          </SwiperSlide>
+                {
+                  resume.projects.map((project)=> 
+                    <SwiperSlide key={project.name}>
+                      <ProjectSlide>
+                        <SlideImage src={project.img}/>
+                        <SlideTitle>
+                          {project.name}
+                        </SlideTitle>
+                        <SlideDescription>
+                          {project.description}
+                        </SlideDescription>
+                        <SlideTechnologies>
+                          {
+                          project.techonologies.map((tech)=> 
+                            <Tag key={tech}>{tech}</Tag>
+                          )
+                          }
+                        </SlideTechnologies>
+                        <SlideActions>
+                          <ActionButton variant="outlined">Live</ActionButton>
+                          <ActionButton variant="outlined">Source</ActionButton>
+                        </SlideActions>
+                      </ProjectSlide>
+                    </SwiperSlide>
+                  )
+                }
         </Swiper>
       </SwiperWrapper>
     </Wrapper>

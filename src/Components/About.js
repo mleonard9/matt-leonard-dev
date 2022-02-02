@@ -7,10 +7,10 @@ import Skills from './Skills';
 const Wrapper = styled.div`
   display: flex;
   width: 100%;
-  height: 48rem;
   justify-content: center;
   align-items: center;
-  background: #EEF2F3;
+  background: #15202B;
+  color: #FFFFFF;
 `;
 
 const PhotoCard = styled.div`
@@ -18,7 +18,7 @@ const PhotoCard = styled.div`
   width: 20rem;
   text-align: center;
   margin: 2rem;
-  background: white;
+  background: #192734;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
@@ -29,10 +29,11 @@ const Photo = styled.img`
 `;
 
 const InfoCard = styled.div`
-  height: 40rem;
+  height: 36rem;
   width: 100%;
   max-width: 72rem;
-  background: white;
+  background: #192734;
+  color: #FFFFFF;
   padding: 1rem 2rem;
   margin: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

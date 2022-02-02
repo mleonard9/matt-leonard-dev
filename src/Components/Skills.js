@@ -3,10 +3,32 @@ import styled from 'styled-components'
 import { FaAngular, FaReact, FaJava, FaSwift} from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si'
 import resume from '../Resources/resume.json';
+import Button from '@mui/material/Button';
 
 const Wrapper = styled.div`
-  width: 100%
   display: flex;
+`;
+
+const SkillsWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 1rem;
+`;
+
+const TagsWrapper = styled.div`
+  width: 30%;
+  diplay: flex;
+`;
+
+const Tag = styled(Button)`
+  && {
+    line-height: .5rem;
+    color: white;
+    background-color: #22303C;
+    margin: .25rem;
+    padding: .5rem;
+  }
 `;
 
 const Skill = styled.div`
@@ -35,6 +57,8 @@ const Rating = styled.div`
   height: 1rem;
   background: red;
   border-radius: 1rem 0 0 1rem;
+  transition: 1s ease;
+  transition-delay: 0.5s;
 `;
 
 const RatingContainer = styled.div`
@@ -58,6 +82,7 @@ function Icon(props) {
       return <FaJava />;
     case 'Swift':
       return <FaSwift />;
+    default:
   }
 }
 
@@ -65,19 +90,28 @@ function Skills() {
   return (
     <>
     <Wrapper>
-      {
-        resume.skills.map(function(skill) {
-        return <Skill key={skill.name}>
-          <IconWrapper>
-            <Icon name={skill.name}/>
-          </IconWrapper>
-          <Name>{skill.name}</Name>
-          <RatingContainer>
-            <Rating rating={skill.rating} />
-          </RatingContainer>
-        </Skill>
-        }.bind(this))
-      }
+      <SkillsWrapper>
+        {
+          resume.skills.map((skill, key) => 
+          <Skill key={key}>
+            <IconWrapper>
+              <Icon name={skill.name}/>
+            </IconWrapper>
+            <Name>{skill.name}</Name>
+            <RatingContainer>
+              <Rating rating={skill.rating} />
+            </RatingContainer>
+          </Skill>
+          )
+        }
+      </SkillsWrapper>
+      <TagsWrapper>
+        {
+          resume.technologies.map((tech, key) => 
+          <Tag size="small" key={key}>{tech}</Tag>
+          )
+        }
+      </TagsWrapper>
     </Wrapper>
     </>
   );

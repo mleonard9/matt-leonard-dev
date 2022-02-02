@@ -33,7 +33,7 @@ const IconWrapper = styled.div`
 `;
 
 const Icon = styled.a`
-  color: white;
+  color: #FFFFFF;
   font-size: 2rem;
   margin: 1rem;
   cursor: pointer;
@@ -41,12 +41,12 @@ const Icon = styled.a`
 
 const Title = styled.div`
   text-align: center;
-  color: #EEF2F3;
+  color: #FFFFFF;
 `;
 
 const SubTitle = styled.div`
   text-align: center;
-  color: #EEF2F3;
+  color: #FFFFFF;
 `;
 
 const DownloadButton = styled.a`
@@ -54,8 +54,8 @@ const DownloadButton = styled.a`
   padding: .5rem;
   margin: auto;
   width: 16rem;
-  background: #11A3DE;
-  color: #EEF2F3;
+  background: #1DA1F2;
+  color: #FFFFFF;
   text-decoration: none;
 `
 function Home() {
