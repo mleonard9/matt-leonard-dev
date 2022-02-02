@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f60df84.css",
-    "main.js": "/static/js/main.2b5be6fa.js",
+    "main.css": "/static/css/main.047f6e23.css",
+    "main.js": "/static/js/main.f7f7ef17.js",
     "static/media/profile-picture.jpg": "/static/media/profile-picture.9dd743037c739b561d57.jpg",
     "static/media/Matthew-Leonard-Resume.pdf": "/static/media/Matthew-Leonard-Resume.2b4c6f8be28a5b77e97b.pdf",
     "static/media/cartoon-avatar.svg": "/static/media/cartoon-avatar.13eb1224850f305fa839a70c908e9439.svg",
     "index.html": "/index.html",
-    "main.4f60df84.css.map": "/static/css/main.4f60df84.css.map",
-    "main.2b5be6fa.js.map": "/static/js/main.2b5be6fa.js.map"
+    "main.047f6e23.css.map": "/static/css/main.047f6e23.css.map",
+    "main.f7f7ef17.js.map": "/static/js/main.f7f7ef17.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f60df84.css",
-    "static/js/main.2b5be6fa.js"
+    "static/css/main.047f6e23.css",
+    "static/js/main.f7f7ef17.js"
   ]
 }
