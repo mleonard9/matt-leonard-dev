@@ -6,6 +6,7 @@ import Skills from './Skills';
 
 const Wrapper = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -29,6 +30,7 @@ const Photo = styled.img`
 `;
 
 const InfoCard = styled.div`
+  flex: 2;
   height: 36rem;
   width: 100%;
   max-width: 72rem;

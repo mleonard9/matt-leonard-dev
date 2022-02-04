@@ -4,6 +4,8 @@ import { FaAngular, FaReact, FaJava, FaSwift} from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si'
 import resume from '../Resources/resume.json';
 import Button from '@mui/material/Button';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,13 +23,11 @@ const TagsWrapper = styled.div`
   diplay: flex;
 `;
 
-const Tag = styled(Button)`
+const Tag = styled(Chip)`
   && {
-    line-height: .5rem;
     color: white;
     background-color: #22303C;
-    margin: .25rem;
-    padding: .5rem;
+    margin: .125rem;
   }
 `;
 
@@ -105,13 +105,13 @@ function Skills() {
           )
         }
       </SkillsWrapper>
-      <TagsWrapper>
-        {
-          resume.technologies.map((tech, key) => 
-          <Tag size="small" key={key}>{tech}</Tag>
-          )
-        }
-      </TagsWrapper>
+        <TagsWrapper>
+          {
+            resume.technologies.map((tech, key) => 
+              <Tag label={tech} key={key} />
+            )
+          }
+        </TagsWrapper>
     </Wrapper>
     </>
   );
