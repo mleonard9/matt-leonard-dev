@@ -3,9 +3,7 @@ import styled from 'styled-components'
 import { FaAngular, FaReact, FaJava, FaSwift} from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si'
 import resume from '../Resources/resume.json';
-import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
 
 const Wrapper = styled.div`
   display: flex;
