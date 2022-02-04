@@ -1,63 +1,22 @@
 import React from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
 import styled from 'styled-components'
 import resume from '../Resources/resume.json';
 import Button from '@mui/material/Button';
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination"
-
-// import Swiper core and required modules
-import SwiperCore, {
-  Pagination
-} from 'swiper';
-
-// install Swiper modules
-SwiperCore.use([Pagination]);
+import Chip from '@mui/material/Chip';
 
 const Wrapper = styled.div`
-  display: flex
   width: 100%;
-  height: 42rem;
-  padding: 2rem;
   background: #15202B;
 `;
 
-const SwiperWrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    font-size: 18px;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 16rem;
-    height: 24rem;
-    object-fit: cover;
-  }
+const ProjectGrid = styled.div`
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
 `;
 
 const ProjectSlide = styled.div`
@@ -87,10 +46,9 @@ const SlideDescription = styled.div`
   overflow: hidden;
   font-size: 1rem;
   line-height: 1.5rem;
-  margin: .25rem .5rem .5rem .5rem;
+  margin: 0 .5rem;
   opacity: 75%;
 `;
-
 
 const SlideActions = styled.div`
   position: absolute;
@@ -99,7 +57,9 @@ const SlideActions = styled.div`
 `;
 
 const SlideTechnologies = styled.div`
-  width: 100%;
+  position: absolute;
+  margin: 0 .25rem;
+  bottom: 3rem;
 `;
 
 const ActionButton = styled(Button)`
@@ -108,13 +68,11 @@ const ActionButton = styled(Button)`
   }
 `;
 
-const Tag = styled(Button)`
+const Tag = styled(Chip)`
   && {
-    line-height: .5rem;
     color: white;
     background-color: #22303C;
-    margin: .25rem;
-    padding: .5rem;
+    margin: .125rem;
   }
 `;
 
@@ -122,56 +80,32 @@ const Tag = styled(Button)`
 function Projects() {
   return (
     <Wrapper>
-      <SwiperWrapper>
-        <Swiper slidesPerView={3} spaceBetween={30} pagination={{"clickable": true}} breakpoints={{
-              // when window width is >= 640px
-              640: {
-                slidesPerView: 1,
-              },
-              // when window width is >= 768px
-              768: {
-                slidesPerView: 2,
-              },
-              // when window width is >= 1200px
-              1200: {
-                slidesPerView: 3,
-              },
-              1600: {
-                slidesPerView: 4,
-              }, 
-              2000: {
-                slidesPerView: 5,
-              } 
-            }}
-              className="mySwiper">
-                {
-                  resume.projects.map((project)=> 
-                    <SwiperSlide key={project.name}>
-                      <ProjectSlide>
-                        <SlideImage src={project.img}/>
-                        <SlideTitle>
-                          {project.name}
-                        </SlideTitle>
-                        <SlideDescription>
-                          {project.description}
-                        </SlideDescription>
-                        <SlideTechnologies>
-                          {
-                          project.techonologies.map((tech)=> 
-                            <Tag key={tech}>{tech}</Tag>
-                          )
-                          }
-                        </SlideTechnologies>
-                        <SlideActions>
-                          <ActionButton variant="outlined">Live</ActionButton>
-                          <ActionButton variant="outlined">Source</ActionButton>
-                        </SlideActions>
-                      </ProjectSlide>
-                    </SwiperSlide>
+      <ProjectGrid>
+        {
+          resume.projects.map((project, key)=> 
+              <ProjectSlide key={key}>
+                <SlideImage src={project.img}/>
+                <SlideTitle>
+                  {project.name}
+                </SlideTitle>
+                <SlideDescription>
+                  {project.description}
+                </SlideDescription>
+                <SlideTechnologies>
+                  {
+                  project.techonologies.map((tech)=> 
+                    <Tag label={tech} key={tech} />
                   )
-                }
-        </Swiper>
-      </SwiperWrapper>
+                  }
+                </SlideTechnologies>
+                <SlideActions>
+                  <ActionButton variant="outlined">Live</ActionButton>
+                  <ActionButton variant="outlined">Source</ActionButton>
+                </SlideActions>
+              </ProjectSlide>
+          )
+        }
+      </ProjectGrid>
     </Wrapper>
   );
 }
