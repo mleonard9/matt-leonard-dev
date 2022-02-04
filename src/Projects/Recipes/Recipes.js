@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import recipes from './RecipeData.json';
 import { InputAdornment, TextField } from '@mui/material';
 import { SearchOutlined } from '@mui/icons-material';
-import RecipePage from './RecipePage';
 
 const RecipeGrid = styled.div`
   height: 100%;
@@ -36,61 +35,41 @@ const RecipeSearch = styled(TextField)`
 
 function Recipes() {
   const [searchValue, setSearchValue] = React.useState('');
-  const [selectedRecipe, setSelectedRecipe] = React.useState(null);
-  const [showRecipe, setShowRecipe] = React.useState(false);
+  // const [selectedRecipe, setSelectedRecipe] = React.useState(null);
+  // const [showRecipe, setShowRecipe] = React.useState(false);
 
   const handleSearch = (event) => {
     setSearchValue(event.target.value);
   };
 
-  const selectRecipe = (recipe) => {    
-    setSelectedRecipe(recipe)
-    
-    if(selectedRecipe) {
-      setShowRecipe(true);
-    }
-  }
-
-  const closeRecipePage = () => {
-    setShowRecipe(false);
-  }
 
     return (
-      <>
+        <>
+          <RecipeHeader>
+          <PageTitle>Recipes</PageTitle>
+          <FilterBar>
+            <RecipeSearch 
+              id="outlined-basic" 
+              label="Search" 
+              variant="outlined"
+              value={searchValue}
+              onChange={handleSearch}
+              InputProps={{
+                endAdornment: (
+                  <InputAdornment position="start">
+                    <SearchOutlined />
+                  </InputAdornment>
+                ),
+              }} />
+          </FilterBar>
+        </RecipeHeader>
+        <RecipeGrid>
         {
-          !showRecipe &&
-          <>
-            <RecipeHeader>
-            <PageTitle>Recipes</PageTitle>
-            <FilterBar>
-              <RecipeSearch 
-                id="outlined-basic" 
-                label="Search" 
-                variant="outlined"
-                value={searchValue}
-                onChange={handleSearch}
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="start">
-                      <SearchOutlined />
-                    </InputAdornment>
-                  ),
-                }} />
-            </FilterBar>
-          </RecipeHeader>
-          <RecipeGrid>
-          {
-            recipes.filter(recipe => recipe.title.includes(searchValue)).map((recipe, key)=> 
-            <RecipeCard key={key} recipe={recipe} onRecipeSelected={selectRecipe}/>
-            )
-          }
-        </RecipeGrid>
-        </>
+          recipes.filter(recipe => recipe.title.includes(searchValue)).map((recipe, key)=> 
+          <RecipeCard key={key} recipe={recipe}/>
+          )
         }
-        {
-          showRecipe &&
-          <RecipePage recipe={selectedRecipe} showRecipe={showRecipe} onCloseRecipePage={closeRecipePage}/>
-        }
+      </RecipeGrid>
       </>
     );
 }
