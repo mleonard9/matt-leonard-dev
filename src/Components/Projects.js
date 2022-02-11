@@ -7,16 +7,17 @@ import Chip from '@mui/material/Chip';
 
 const Wrapper = styled.div`
   width: 100%;
+  padding-bottom: 2rem;
   background: #15202B;
 `;
 
 const ProjectGrid = styled.div`
-  justify-content: space-around;
+  // justify-content: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 2rem;
-  padding: 2rem;
+  padding-left: 4rem;
 `;
 
 const ProjectSlide = styled.div`
@@ -38,7 +39,7 @@ const SlideImage = styled.div`
 const SlideTitle = styled.div`
   font-size: 1.5rem;
   line-height: 1.5rem;
-  margin: .25rem .5rem;
+  margin: .5rem .5rem;
 `;
 
 const SlideDescription = styled.div`
@@ -76,36 +77,49 @@ const Tag = styled(Chip)`
   }
 `;
 
+const Title = styled.div`
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 2rem 0;
+`;
+
+const Content = styled.div`
+  max-width: 100rem;
+  margin: auto;
+`;
 
 function Projects() {
   return (
     <Wrapper>
-      <ProjectGrid>
-        {
-          resume.projects.map((project, key)=> 
-              <ProjectSlide key={key}>
-                <SlideImage src={project.img}/>
-                <SlideTitle>
-                  {project.name}
-                </SlideTitle>
-                <SlideDescription>
-                  {project.description}
-                </SlideDescription>
-                <SlideTechnologies>
-                  {
-                  project.techonologies.map((tech)=> 
-                    <Tag label={tech} key={tech} />
-                  )
-                  }
-                </SlideTechnologies>
-                <SlideActions>
-                  <ActionButton variant="outlined">Live</ActionButton>
-                  <ActionButton variant="outlined">Source</ActionButton>
-                </SlideActions>
-              </ProjectSlide>
-          )
-        }
-      </ProjectGrid>
+      <Content>
+        <Title>Projects</Title>
+        <ProjectGrid>
+          {
+            resume.projects.map((project, key)=> 
+                <ProjectSlide key={key}>
+                  <SlideImage src={project.img}/>
+                  <SlideTitle>
+                    {project.name}
+                  </SlideTitle>
+                  <SlideDescription>
+                    {project.description}
+                  </SlideDescription>
+                  <SlideTechnologies>
+                    {
+                    project.techonologies.map((tech)=> 
+                      <Tag label={tech} key={tech} />
+                    )
+                    }
+                  </SlideTechnologies>
+                  <SlideActions>
+                    <ActionButton variant="outlined">Live</ActionButton>
+                    <ActionButton variant="outlined">Source</ActionButton>
+                  </SlideActions>
+                </ProjectSlide>
+            )
+          }
+        </ProjectGrid>
+      </Content>
     </Wrapper>
   );
 }

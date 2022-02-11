@@ -25,32 +25,48 @@
   ],
   "experience": [
     {
-      "company":"Nemera",
-      "title": "IT Contractor",
-      "time_period": "June 2016 - July 2016",
-      "description": "At Nemera I worked directly with the rest of the IT team, I was on a eight week contract for a project they needed extra help on. We succeeded in finishing this project in our scheduled time."
-    },
-    {
-      "company":"MMD Services",
-      "title": "IT Recruiter",
-      "time_period": "May 2016 - March 2017",
-      "description": "My role at MMD Services is to seek out qualified candidates to fill contract and direct hire opportunities in the Information Technology industry."
+      "company":"Kin and Carta",
+      "title": "Front End Developer",
+      "time_period": "2019 - Present",
+      "description": "As a Software Developer consultant at Kin and Carta I have had oppurtunities to learn and develop on multiple technoligies including Java, Swift, Angular, and React. I have used these technologies to help my teams create enterprise level apps in both the Agriculture and Security spaces."
     },
     {
       "company":"Loras All Sports Camp",
       "title": "Assistant Boy's Head Counselor and Web Developer",
-      "time_period": "June 2018 - September 2019",
+      "time_period": "2018 - 2019",
       "description": "As an Assistant Head Counselor at Loras All Sports Camp I am on the Administrative Staff that helps run the camp week after week. This role involves being a leader to the 28 Boy's counselors working the camp. Responding to problems that pop up in a quick and orderly manner is a crucial part of this job. As a web developer for Loras All Sports Camp I worked directly alongside the front office to assist them in making their ideas a reality on their company website. LASC hopes to use their new website as a marketing piece to boost their already multi-million dollar annual revenue."
     },
     {
-      "company":"Kin and Carta",
-      "title": "Front End Developer",
-      "time_period": "September 2019 - Present",
-      "description": "As a Software Developer consultant at Kin and Carta I have had oppurtunities to learn and develop on multiple technoligies including Java, Swift, Angular, and React. I have used these technologies to help my teams create enterprise level apps in both the Agriculture and Security spaces."
+      "company":"MMD Services",
+      "title": "IT Recruiter",
+      "time_period": "2017",
+      "description": "My role at MMD Services is to seek out qualified candidates to fill contract and direct hire opportunities in the Information Technology industry."
+    },
+    {
+      "company":"Nemera",
+      "title": "IT Contractor",
+      "time_period": "2016",
+      "description": "At Nemera I worked directly with the rest of the IT team, I was on a eight week contract for a project they needed extra help on. We succeeded in finishing this project in our scheduled time."
     }
   ]
   ,
   "projects": [
+    {
+      "name": "Crypto Tracker",
+      "description": "",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["react native"],
+      "source":"",
+      "live": ""
+    },
+    {
+      "name": "Todo List",
+      "description": "",
+      "img": "https://via.placeholder.com/150",
+      "techonologies": ["react native"],
+      "source":"",
+      "live": ""
+    },
     {
       "name": "Calculator",
       "description": "In the process of learning React, it is only done correctly if you create a calculator and handle all of the logic yourself. Here is mine.",
@@ -60,56 +76,8 @@
       "live": ""
     },
     {
-      "name": "Budget Calculator",
-      "description": "As a Software Developer consultant at Kin and Carta I have had oppurtunities to learn and develop on multiple technoligies including Java, Swift, Angular, and React. I have used these technologies to help my teams create enterprise level apps in both the Agriculture and Security spaces.",
-      "img": "https://via.placeholder.com/150",
-      "techonologies": ["react"],
-      "source":"",
-      "live": ""
-    },
-    {
       "name": "Recipe Organizer",
       "description": "As a Software Developer consultant at Kin and Carta I have had oppurtunities to learn and develop on multiple technoligies including Java, Swift, Angular, and React. I have used these technologies to help my teams create enterprise level apps in both the Agriculture and Security spaces.",
-      "img": "https://via.placeholder.com/150",
-      "techonologies": ["react"],
-      "source":"",
-      "live": ""
-    },
-    {
-      "name": "Calculator2",
-      "description": "",
-      "img": "https://via.placeholder.com/150",
-      "techonologies": ["react"],
-      "source":"",
-      "live": ""
-    },
-    {
-      "name": "Calculator4",
-      "description": "",
-      "img": "https://via.placeholder.com/150",
-      "techonologies": ["react"],
-      "source":"",
-      "live": ""
-    },
-    {
-      "name": "Budget Calculator2",
-      "description": "",
-      "img": "https://via.placeholder.com/150",
-      "techonologies": ["react"],
-      "source":"",
-      "live": ""
-    },
-    {
-      "name": "Recipe Organizer2",
-      "description": "",
-      "img": "https://via.placeholder.com/150",
-      "techonologies": ["react"],
-      "source":"",
-      "live": ""
-    },
-    {
-      "name": "Calculator3",
-      "description": "",
       "img": "https://via.placeholder.com/150",
       "techonologies": ["react"],
       "source":"",
