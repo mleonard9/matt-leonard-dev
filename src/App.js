@@ -4,16 +4,14 @@ import Home from './Components/Home'
 import Particles from "react-tsparticles";
 import particlesOptions from "./particles.json";
 import Projects from './Components/Projects'
-import About from './Components/About'
 import Experience from './Components/Experience'
 
 function App() {
     return (
 			<div className="App">
 				<Home />
-				<About />
-				<Projects />
 				<Experience />
+				<Projects />
 				<Particles options={particlesOptions} className='particles'/>
 			</div>
     );
